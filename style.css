@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .timeline-line {
+        @apply after:w-[1px] after:h-[65%] sm:after:h-[90%] after:absolute after:bg-[url('./public/assets/images/svg/timeline-line.svg')] after:top-[8%] sm:after:top-0 after:left-[50%]
+    }
+
+    .circle1 {
+        @apply after:absolute after:-left-[90px] after:-top-[52px] after:bg-[url('./public/assets/images/svg/timeline-circle.svg')] after:w-[58px] after:h-[58px] after:bg-no-repeat;
+    }
+
+    .circle2 {
+        @apply after:absolute after:-right-[90px] after:-top-[52px] after:bg-[url('./public/assets/images/svg/timeline-circle.svg')] after:w-[58px] after:h-[58px] after:bg-no-repeat;
+    }
+
+    .sm-circle2 {
+        @apply before:absolute before:-left-[60px] before:-top-[52px] before:bg-[url('./public/assets/images/svg/timeline-circle.svg')] before:w-[58px] before:h-[58px] before:bg-no-repeat before:block;
+    }
+}
+
+
+.number {
+    -webkit-text-stroke: 1px #5eb1c5;
+}
+accordianlist input[type=radio] {
+    display: none;
+}
+
+.accordianlist .content {
+    max-height: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.accordianlist input[type=radio]:checked+label+.content {
+    max-height: 2000px;
+    height: auto;
+}
+
+.accordianlist input[type=radio]:checked+label p svg {
+    transform: rotate(180deg);
+}
+
+.accordianlist1 input[type=radio]:checked+label p span .sub {
+    transform: translateX(-10px);
+}
+
+.accordianlist1 input[type=radio] {
+    display: none;
+}
+
+.accordianlist1 .content1 {
+    max-height: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.accordianlist1 input[type=radio]:checked+label+.content1 {
+    max-height: 2000px;
+    height: auto;
+}
+
+.accordianlist1 input[type=radio]:checked+label p span .plus {
+    display: none;
+}
