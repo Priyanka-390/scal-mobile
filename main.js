@@ -33,10 +33,20 @@ window.addEventListener('scroll', function () {
 //   document.body.classList.toggle("overflow-hidden");
 //   document.getElementById("menubtn-icon").classList.toggle("cross")
 // }
-let logo = document.querySelector("logo")
-logo.addEventListener("click", function () {
+let logo = document.querySelector(".logo")
+console.log(logo);
+logo.addEventListener('click', function () {
   document.getElementById("navbar").classList.toggle("-left-full");
   document.getElementById("navbar").classList.toggle("show");
   document.body.classList.toggle("overflow-hidden");
   document.getElementById("menubtn-icon").classList.toggle("cross")
 })
+let remove = document.querySelectorAll(".mynavclick")
+remove.forEach(e => {
+  e.addEventListener("click", function () {
+    document.getElementById("navbar").classList.toggle("-left-full");
+    document.getElementById("navbar").classList.toggle("show");
+    document.body.classList.toggle("overflow-hidden");
+    document.getElementById("menubtn-icon").classList.toggle("cross")
+  })
+});
