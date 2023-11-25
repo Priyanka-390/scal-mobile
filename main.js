@@ -4,13 +4,6 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
-//================== navbar
-function openNav() {
-  document.getElementById("navbar").classList.toggle("-left-full");
-  document.getElementById("navbar").classList.toggle("show");
-  document.body.classList.toggle("overflow-hidden");
-  document.getElementById("menubtn-icon").classList.toggle("cross")
-}
 
 //=============== preloader
 const preloader = document.getElementById("preloader");
