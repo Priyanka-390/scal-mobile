@@ -33,3 +33,10 @@ function openNav() {
   document.body.classList.toggle("overflow-hidden");
   document.getElementById("menubtn-icon").classList.toggle("cross")
 }
+let logo = document.querySelector("logo")
+logo.addEventListener("click", function () {
+  document.getElementById("navbar").classList.toggle("-left-full");
+  document.getElementById("navbar").classList.toggle("show");
+  document.body.classList.toggle("overflow-hidden");
+  document.getElementById("menubtn-icon").classList.toggle("cross")
+})
