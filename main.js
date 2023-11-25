@@ -4,22 +4,33 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//================== navbar
+function openNav() {
+  document.getElementById("navbar").classList.toggle("-left-full");
+  document.getElementById("navbar").classList.toggle("show");
+  document.body.classList.toggle("overflow-hidden");
+  document.getElementById("menubtn-icon").classList.toggle("cross")
+}
 
-setupCounter(document.querySelector('#counter'))
+//=============== preloader
+const preloader = document.getElementById("preloader");
+setTimeout(() => {
+  document.getElementById("preloader").classList.add("hidden");
+  document.body.classList.remove("overflow-hidden")
+}, 3000);
+
+// back to top //
+let backToTop = document.getElementById('backToTop')
+function goToTop() {
+  window.scrollTo(0, 0, { behavior: 'smooth' })
+}
+document.getElementById('backToTop').addEventListener('click', goToTop)
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 700) {
+    backToTop.classList.remove('hidden');
+    backToTop.classList.add('flex');
+  } else {
+    backToTop.classList.remove('flex');
+    backToTop.classList.add('hidden');
+  }
+});
